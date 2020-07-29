@@ -13,9 +13,14 @@ import android.os.ParcelFileDescriptor;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
+import jp.wasabeef.glide.transformations.gpu.SepiaFilterTransformation;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
@@ -33,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.setType("image/*");
         startActivityForResult(intent, 1);
+    }
+
+    public void applySepia(View view) {
+        Glide.with(this)
+                .load(image)
+                .apply(RequestOptions.bitmapTransform(new SepiaFilterTransformation()))
+                .into(imageView);
     }
 
     @Override
