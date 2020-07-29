@@ -13,32 +13,63 @@
 
         <ImageView
             android:id="@+id/image_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose photo"
-            android:onClick="selectPhoto" />
-
-        <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sepia"
-        android:onClick="applySepia" />
+            android:onClick="selectPhoto"
+            android:text="Choose photo" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Toon"
-            android:onClick="applyToon" />
+            android:onClick="applySepia"
+            android:text="Sepia" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sketch"
-            android:onClick="applySketch" />
+            android:onClick="applyToon"
+            android:text="Toon" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="applySketch"
+            android:text="Sketch" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="applyInvert"
+            android:text="Invert" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="applyPixelation"
+            android:text="Pixelation" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="applySwirl"
+            android:text="Swirl" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="applyKuwahara"
+            android:text="Kuwahara" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="applyVignette"
+            android:text="Vignette" />
     </LinearLayout>
 
 </ScrollView>

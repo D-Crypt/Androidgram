@@ -20,9 +20,16 @@ import com.bumptech.glide.request.RequestOptions;
 import java.io.FileDescriptor;
 import java.io.IOException;
 
+import jp.wasabeef.glide.transformations.gpu.BrightnessFilterTransformation;
+import jp.wasabeef.glide.transformations.gpu.ContrastFilterTransformation;
+import jp.wasabeef.glide.transformations.gpu.InvertFilterTransformation;
+import jp.wasabeef.glide.transformations.gpu.KuwaharaFilterTransformation;
+import jp.wasabeef.glide.transformations.gpu.PixelationFilterTransformation;
 import jp.wasabeef.glide.transformations.gpu.SepiaFilterTransformation;
 import jp.wasabeef.glide.transformations.gpu.SketchFilterTransformation;
+import jp.wasabeef.glide.transformations.gpu.SwirlFilterTransformation;
 import jp.wasabeef.glide.transformations.gpu.ToonFilterTransformation;
+import jp.wasabeef.glide.transformations.gpu.VignetteFilterTransformation;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
@@ -59,6 +66,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void applySketch(View view) {
         apply(new SketchFilterTransformation());
+    }
+
+    public void applyInvert(View view) {
+        apply(new InvertFilterTransformation());
+    }
+
+    public void applyPixelation(View view) {
+        apply(new PixelationFilterTransformation());
+    }
+
+    public void applySwirl(View view) {
+        apply(new SwirlFilterTransformation());
+    }
+
+    public void applyKuwahara(View view) {
+        apply(new KuwaharaFilterTransformation());
+    }
+
+    public void applyVignette(View view) {
+        apply(new VignetteFilterTransformation());
     }
 
     @Override
